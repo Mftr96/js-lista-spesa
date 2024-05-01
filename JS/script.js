@@ -5,7 +5,7 @@ let lista=[
     "latte",
     "burro",
     "pane",
-    "pasta"
+    "pasta",
 ]
 
 //(milestone3)richiamo elemento ul in JS
@@ -29,9 +29,14 @@ i=0
 while(i < lista.length){
     const element = lista[i];
     console.log(element);
-    let oggetto_spesa=document.createElement("li");
-    lista_spesa.append(oggetto_spesa);
-    oggetto_spesa.innerText= element;
+    // let oggetto_spesa=document.createElement("li");
+    // lista_spesa.append(oggetto_spesa);
+    // oggetto_spesa.innerText= element;
+    
+    /*bonus 1: creazione elemento tramite
+     innerhtml invece dell'append*/
+     lista_spesa.innerHTML+= (`<li> ${element} </li>`);
+
     i++;
 }
 
@@ -40,3 +45,6 @@ while(i < lista.length){
 /*ocio a scrivere bene i comandi in console che sennò sbotti  
 come un disgraziato
       */
+
+
+/*DOPPIO OCIO!   innerHTML si scrive, non innerhtml*/
